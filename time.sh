@@ -4,60 +4,89 @@ sleep 1
 x=`date | grep -E -o "(Mon|Tue|Wed|Thu|Fri|Sut|Sun)"`
 case $x in
         Mon)
-                echo "Сегодня Понедельник"
+                echo "Today is Monday"
                 sleep 0.2
-                echo' ,---------------------------.              '
-                echo' | Лодырь  и  бездельник  !  |     ...      '
-                echo' |им праздник и в понедельник|    (o -)     '
-                echo' `--------------------------` ooO--(_)--Ooo-'
+                echo' ,----------------------------.               '
+                echo' |I invented a new word today:|      ...      '
+                echo' |        Plagiarism.         |     (o -)     '
+                echo' `----------------------------` ooO--(_)--Ooo-'
         ;;
         Tue)
-                echo  "Сегодня Вторник "
+                echo  "Today is Tuesday"
                 sleep 0.2
-                echo' ,---------------------------.              '
-                echo' |   Вторник - повторник !   |     ...      '
-                echo' `--------------------------(_    (o -)     '
-                echo' ---------------------------  ooO--(_)--Ooo-'
+                echo' ,---------------------------------.                '
+                echo' |   What did one traffic light    |       ...      '
+                echo' |       say to the other?         |(_    (o -)     '
+                echo' | Stop looking at me, Im changing!|  ooO--(_)--Ooo-'
+                echo' `---------------------------------`                '
         ;;
         Wed)
-                echo  'Сегодня Среда'
+                echo 'Today is Wednesday'
                 sleep 0.2
-                echo ' ,---------------------------.               '
-                echo ' | Среда длиннее пятницы. !  |     ...       '
-                echo ' `--------------------------(_    (o -)      '
-                echo ' ---------------------------  ooO--(_)--Ooo- '
+                echo ' ,---------------------------------.               '
+                echo ' | Two artists had an art contest. |     ...       '
+                echo ' |-It ended in a draw!!            |    (o -)      '
+                echo ' `---------------------------------`ooO--(_)--Ooo- '
         ;;
         Thu)
-                echo  "Сегодня Четверг"
+                echo  "Today is Thursday"
                 sleep 0.2
-                echo' ,---------------------------.              '
-                echo' | Неделя четвергом крепка ! |     ...      '
-                echo' |    а жизнь половиною      |    (o -)     '
-                echo' `-------------------------- `ooO--(_)--Ooo-'
+                echo' ,--------------------------------------.              '
+                echo' | What do you call bears with no ears? |     ...      '
+                echo' |    B.                                |    (o -)     '
+                echo' `------------------------------------- `ooO--(_)--Ooo-'
         ;;
         Fri)
-                echo  "Сегодня Пятница"
+                echo  "Today is Friday"
                 sleep 0.2
-                echo ' ,---------------------------.              '
-                echo ' |Из под пятницы суббота видна|    ...      '
-                echo ' `--------------------------(_    (o -)     '
-                echo ' ---------------------------  ooO--(_)--Ooo-'
+                echo ' ,------------------------------.               '
+                echo ' |I used to breed rabbits.  .   |      ...      '
+                echo ' | Then I realized              |     (o -)     '
+                echo ' |they can handle it themselves.| ooO--(_)--Ooo-'
+                echo ' `------------------------------`               '
         ;;
         Sut)
-                echo -n "Сегодня Суббота"
+                echo -n "Todat is Saturday"
                 sleep 0.2
-                echo' ,---------------------------.              ' 
-                echo' | Суббота для человека !    |     ...      '
-                echo' | а не человек для субботы  |    (o -)     '
-                echo' `-------------------------- `ooO--(_)--Ooo-'
+                echo' ,------------------------------.               ' 
+                echo' | What is Jesus favorite food? |      ...      '
+                echo' |        Cheeses.              |     (o -)     '
+                echo' `------------------------------` ooO--(_)--Ooo-'
         ;;
         Sun)
-                echo -n "Сегодня Воскресенье"
+                echo -n "Today is Sunday"
                 sleep 0.2 
-                echo  ',---------------------------.               '
-                echo  '| Воскресенье день веселья! |      ...      '
-                echo  ' `--------------------------(_    (o -)     '
-                echo  ' ---------------------------  ooO--(_)--Ooo-'
+                echo  ',---------------------------------.                '
+                echo  '| “Siri, why am I still single?!” |       ...      '
+                echo  '|`Siri activates front camera.    | _    (o -)     '
+                echo  '`---------------------------------`  ooO--(_)--Ooo-'
         ;;
 esac
 
+sleep 1
+x1=`uptime | sed 's/.//' | grep -o "^0[0-5]"`
+
+if [[ $x1 = 0[0-5] ]]
+then
+echo 'it is night outside, it is time to sleep'
+fi
+x2=`uptime | sed 's/.//' | grep -o "^0[5-9]"`
+if [[ $x2 = 0[5-9] ]]
+then
+echo 'It is morning in the yard, do a warm-up'
+fi
+x3=`uptime | sed 's/.//' | grep -o "^1[0-7]"`
+if [[ $x3 = 1[0-7] ]]
+then
+echo 'It is day outside, the best time for work'
+fi
+x4=`uptime | sed 's/.//' | grep -o "^1[8-9]"`
+if [[ $x4 = 1[9-0] ]]
+then
+echo 'Evening, clean up and play some games'
+fi
+x5=`uptime | sed 's/.//' | grep -o "^2[0-3]"`
+if [[ $x5 = 2[0-3] ]]
+then
+echo "Do yoga, (you can play a little) and sleep"
+fi
